@@ -22,6 +22,9 @@ db.Course = Course(sequelize, Sequelize);
 import UserRole from "../models/UserRole.js";
 db.UserRole = UserRole(sequelize, Sequelize);
 
+import StudentCourse from "../models/StudentCourse.js";
+db.StudentCourse = StudentCourse(sequelize, Sequelize);
+
 //Role & User has Many-To-Many Relationship
 db.Role.belongsToMany(db.User, {
   through: "user_roles",
